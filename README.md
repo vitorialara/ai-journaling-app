@@ -1,16 +1,85 @@
-# Feel-Write - Emotional Journaling App
+# ✍️ Feel Write – AI-Powered Emotional Journaling App
 
-Feel-Write is a comprehensive emotion tracking application that helps users understand and manage their emotional well-being through journaling and reflection.
+**Feel Write** is an AI-powered journaling web application designed to help users reflect on their emotions, track their mental wellness, and grow emotionally through personalized AI-driven prompts and visual feedback.
 
-## Project Structure
+This project combines my expertise in **machine learning**, **full-stack web development**, and **emotional intelligence design** to create a meaningful tool for self-reflection and mental wellness.
 
+---
+
+## 💡 Features
+
+### 🌟 AI-Enhanced Journaling
+- Generate intelligent, context-aware **reflection prompts** using LLMs
+- Receive **AI-powered summaries and reframed perspectives** on journal entries
+- Integrate a conversational **chatbot assistant** for guided reflection
+
+### 🎨 Visual Growth Feedback
+- Interactive growth animations (flowers, clouds, etc.) that evolve with user consistency and emotion trends
+
+### 📈 Mood Analytics & Summaries
+- Weekly emotion radar charts and summaries
+- Track mood trends, journaling streaks, and time-based statistics
+
+### 👤 Full Auth + User Profiles
+- JWT-based authentication (Sign up, sign in, verify email)
+- Custom dashboards for tracking personal progress and entries
+
+### 💬 Emotion-Centric Design
+- Emotion tagging system with predefined categories
+- Journal entries and reflections are structured around emotional themes
+
+---
+
+## 🧠 Tech Stack
+
+### Frontend
+- **Next.js** with App Router
+- **TailwindCSS** for styling
+- **TypeScript** for type safety
+- **ShadCN UI** & **custom components**
+- **Zustand** & React Context for state
+- **Charts.js** for mood analytics
+
+### Backend
+- **FastAPI** for backend API
+- **PostgreSQL** for data storage
+- **SQLAlchemy** for ORM
+- **Docker** for deployment
+- RESTful APIs organized by domains: `journal`, `emotions`, `users`, `analytics`, `bot`
+
+### AI Integration
+- **OpenAI API** for reflection prompt generation and summaries
+- AI endpoints:
+  - `/api/generate-reflection`
+  - `/api/bot`
+  - `/api/completion`
+
+---
+
+## 🧪 Folder Structure
+
+### Backend
 ```
-feel-write/
-├── backend/           # FastAPI backend
-├── frontend/          # React frontend
-├── pg_database/       # PostgreSQL database setup
-└── README.md
+backend/
+├── app/
+│   ├── api/            # Journal, Emotion, Prompt, User, Bot APIs
+│   ├── models/         # SQLAlchemy models
+│   ├── schemas/        # Pydantic schemas
+│   └── core/           # Security logic (auth, hashing)
 ```
+
+### Frontend
+```
+frontend/
+├── app/
+│   ├── api/            # Next.js API handlers
+│   ├── components/     # UI components + Visual feedback animations
+│   ├── journal/        # Journal pages
+│   ├── dashboard/      # Mood charts, stats, reflections
+│   └── auth/           # Signup, Signin, Email verification
+```
+
+---
 
 ## Setup Instructions
 
@@ -67,22 +136,6 @@ feel-write/
 ## API Documentation
 For detailed API documentation, please refer to [API_DOCS.md](API_DOCS.md).
 
-## Features
-
-- **Emotional journaling**: Log and categorize your emotions
-- **Journal Entries**: Write about your experiences and feelings
-- **Reflection Prompts**: Guided questions to help process emotions
-- **Analytics**: Track emotional patterns over time
-- **User Authentication**: Secure account management
-- **Photo Upload**: Attach photos to your journal entries
-- **Dark Mode**: Support for different themes
-
-## Technology Stack
-
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: FastAPI, Python 3.12
-- **Database**: PostgreSQL
-- **Authentication**: JWT (coming soon)
 
 ## Development
 
@@ -105,18 +158,15 @@ Once the backend server is running:
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Create a Pull Request
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Support
 
-For support, please open an issue in the GitHub repository or contact the development team.
+For support, please open an issue in the GitHub repository.
+
+## ✍️ Author
+
+Built by Vitoria Lara and Ellen
+A passion project focused on applying AI to enhance emotional well-being.
