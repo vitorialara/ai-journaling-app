@@ -168,5 +168,6 @@ For support, please open an issue in the GitHub repository.
 
 ## ✍️ Author
 
-Built by Vitoria Lara and Ellen
+Built by Vitoria Lara and Livia Ellen
+
 A passion project focused on applying AI to enhance emotional well-being.
