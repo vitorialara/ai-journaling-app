@@ -1,0 +1,9 @@
+
+IMAGENAME="feelwrite"
+
+export GCP_PROJECT_ID="feelora-455914"
+export DOCKER_IMAGE_NAME="feelwrite_api"
+export GCR_MULTI_REGION="us.gcr.io"
+export GCR_REGION="us-central1"
+
+docker build -t $GCR_MULTI_REGION/$GCP_PROJECT_ID/$DOCKER_IMAGE_NAME .

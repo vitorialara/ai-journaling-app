@@ -1,0 +1,28 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us.gcr.io/$PROJECT_ID/feelwrite_api:$COMMIT_SHA', './backend']
+
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us.gcr.io/$PROJECT_ID/feelwrite_api:$COMMIT_SHA']
+
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'feelwrite-api'
+      - '--image'
+      - 'us.gcr.io/$PROJECT_ID/feelwrite_api:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--set-env-vars'
+      - 'DATABASE_URL=$$DATABASE_URL'
+
+images:
+  - 'us.gcr.io/$PROJECT_ID/feelwrite_api:$COMMIT_SHA'
